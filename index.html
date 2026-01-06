@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jannavarapu Family</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .box {
+            width: 90%;
+            max-width: 400px;
+            margin: 80px auto;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>JANNAVARAPU'S FAMILY</h1>
+
+        <h3>Enter Name:</h3>
+        <input type="text" id="nameInput" placeholder="Enter name of family member">
+
+        <br>
+        <button onclick="showImage()">SUBMIT</button>
+    </div>
+
+    <script>
+        function showImage() {
+            const name = document.getElementById("nameInput").value.toLowerCase().trim();
+            let imagePath = "";
+
+            if (name === "niranjani") {
+                imagePath = "file:///C:/Users/admin/Desktop/my%20own/niru.jpg";
+            }
+            else if (name === "syam sundar") {
+                imagePath = "file:///C:/Users/admin/Desktop/my%20own/syam.jpg";
+            }
+            else if (name === "gayathri lakshmi") {
+                imagePath = "file:///C:/Users/admin/Desktop/my%20own/gayathri.jpg";
+            }
+            else if (name === "yaswanth") {
+                imagePath = "file:///C:/Users/admin/Desktop/my%20own/yaswanth.jpg";
+            }
+            else {
+                alert("Name not found in family 😅");
+                return;
+            }
+
+            window.open(imagePath, "_blank");
+        }
+    </script>
+
+</body>
+
+</html>
